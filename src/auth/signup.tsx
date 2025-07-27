@@ -10,7 +10,7 @@ export function Signup({ setCurrentUser }) {
         formData.forEach((v, k) => {
             obj[k] = v
         })
-        fetch('http://localhost:8080/signup', {
+        fetch('https://nodeuni.fly.dev/signup', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"

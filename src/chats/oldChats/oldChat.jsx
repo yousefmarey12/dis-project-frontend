@@ -8,7 +8,7 @@ export function OldChat({ currentUser, otherPerson }) {
     let inputRef = useRef(null)
     let chatID = getChatID(currentUser.uid, otherPerson)
     useEffect(() => {
-        fetch('http://localhost:8080/users/' + otherPerson, {
+        fetch('https://nodeuni.fly.dev/users/' + otherPerson, {
             headers: {
                 "Content-Type": 'application/json'
             }
@@ -32,7 +32,7 @@ export function OldChat({ currentUser, otherPerson }) {
 
 
     let fetchChat = id => {
-        fetch('http://localhost:8080/chat/' + id, {
+        fetch('https://nodeuni.fly.dev/chat/' + id, {
             headers: {
                 "Content-Type": "application/json"
             }
@@ -59,7 +59,7 @@ export function OldChat({ currentUser, otherPerson }) {
             email: currentUser.email,
             id: chatID
         }
-        fetch('http://localhost:8080/chat', {
+        fetch('https://nodeuni.fly.dev/chat', {
             method: 'POST',
             headers: {
                 "Content-Type": 'application/json'

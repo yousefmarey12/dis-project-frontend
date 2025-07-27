@@ -11,7 +11,7 @@ export function OldChats({ currentUser }) {
         let obj = {
             uid: currentUser.uid
         }
-        fetch('http://localhost:8080/chats', {
+        fetch('https://nodeuni.fly.dev/chats', {
             method: 'POST',
             body: JSON.stringify(obj),
             headers: {
